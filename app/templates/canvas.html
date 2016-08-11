@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Look What I Drew</title>
+    <style>
+        canvas{
+            border: 1px solid black;
+        }
+    </style>
+    <script src="static/canvas.js"></script>
+</head>
+<body>
+    <canvas width="600" height="200" id="tshirtCanvas"></canvas>
+    <canvas width="600" height="600" id="smiley"></canvas>
+    <form>
+        <p>
+            <label for="backgroundColor">Select background color:</label>
+            <select id="backgroundColor">
+                <option value="white" selected="selected">White</option>
+                <option value="black">Black</option>
+            </select>
+        </p>
+        <p>
+            <label for="shape">Circles or squares?</label>
+            <select id="shape">
+                <option value="none" selected="selected">Neither</option>
+                <option value="circles">Circles</option>
+                <option value="squares">Squares</option>
+            </select>
+        </p>
+        <p>
+            <label for="foregroundColor">Select text color:</label>
+            <select id="foregroundColor">
+                <option value="black" selected="selected">Black</option>
+                <option value="white">White</option>
+            </select>
+        </p>
+        <p>
+            <label for="tweets">Pick a tweet:</label>
+            <select id="tweets"></select>
+        </p>
+        <p>
+            <input type="button" id="previewButton" value="Preview">
+        </p>
+    </form>
+    <script src="http://127.0.0.1:5000/tweets?callback=updateTweets"></script>
+</body>
+</html>
